@@ -1,8 +1,9 @@
-import { IonApp, IonContent, IonHeader, IonInput, IonTitle, IonToolbar } from '@ionic/react';
+import { IonApp, IonContent, IonHeader, IonInput, IonTitle, IonToolbar, IonItem, IonLabel, IonList, IonDatetime } from '@ionic/react';
 import { useState } from 'react';
 
 function App() {
   const [name, setName] = useState('');
+  const [birthDate, setBirthDate] = useState('');
   return (
     <IonApp>
       <IonHeader>
@@ -11,11 +12,24 @@ function App() {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        <IonInput placeholder="Your name"
-        value={name} onIonChange={(event) => setName(event.detail.value)}
-        />
-        <p>
-          You entered: <b>{name}</b>
+          <IonList>
+            <IonItem>
+              <IonLabel position="stacked">Name:</IonLabel>
+              <IonInput value={name}
+            onIonChange={(event) => setName(event.detail.value)}
+            />
+          </IonItem>
+            <IonItem>
+              <IonLabel position= "stacked">Date of Birth:</IonLabel>
+              <IonInput type="date" value={birthDate}
+              onIonChange={(event) => setBirthDate(event.detail.value)}
+              /> 
+               
+               
+            </IonItem>
+          </IonList>
+       <p>
+          You entered: <b>{name}</b>, born on<b>{birthDate}</b>
         </p>
       </IonContent>
     </IonApp>
@@ -23,3 +37,4 @@ function App() {
 }
 
 export default App;
+
