@@ -1,8 +1,8 @@
-import { calculateBiorhythms } from "./biorhythms"
+import { calculateBiorhythms } from "../lib/biorhythms"
 
 it('calculates the physical biorhythm', () => {
      const biorhythms = calculateBiorhythms('1999-12-31', '2022-12-31');
-     expect(biorhythms.physical).toBeCloseto(0.9977);
+     expect(biorhythms.physical).toBeCloseTo(0.9977);
 });
 
 it('calculates the emotional biorhythm', () => {
