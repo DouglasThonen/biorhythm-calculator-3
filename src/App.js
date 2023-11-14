@@ -1,4 +1,4 @@
-import { IonApp, IonContent, IonHeader, IonInput, IonTitle, IonToolbar, IonItem, IonLabel, IonList, IonDatetime } from '@ionic/react';
+import { IonApp, IonContent, IonHeader, IonInput, IonTitle, IonToolbar, IonItem, IonLabel, IonList } from '@ionic/react';
 import { useState } from 'react';
 import BiorhythmCard from './components/BiorhythmCard';
 
