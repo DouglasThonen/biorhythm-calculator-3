@@ -21,21 +21,27 @@ function App() {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
+      {Boolean(birthDate) && (
+       <BiorhythmCard birthDate={birthDate} targetDate={targetDate} />
+       )}
           <IonList>
             <IonItem>
-          </IonItem>
-            <IonItem>
-              <IonLabel position= "fixed">Birth Date:</IonLabel>
+              <IonLabel position= "fixed">
+                Birth Date:
+                </IonLabel>
               <IonInput type="date" value={birthDate}
               onIonChange={(event) => setBirthDate(event.detail.value)}
               /> 
-              <IonLabel position= "fixed">Target Date:</IonLabel>
+              </IonItem>
+              <IonItem>
+              <IonLabel position= "fixed">
+                Target Date:
+                </IonLabel>
               <IonInput type="date" value={targetDate}
               onIonChange={(event) => setTargetDate(event.detail.value)}
               /> 
             </IonItem>
           </IonList>
-       <BiorhythmCard targetDate={targetDate} />
       </IonContent>
     </IonApp>
   );
