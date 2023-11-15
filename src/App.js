@@ -1,6 +1,7 @@
 import { IonApp, IonContent, IonHeader, IonInput, IonTitle, IonToolbar, IonItem, IonLabel, IonList } from '@ionic/react';
 import { useState } from 'react';
 import BiorhythmCard from './components/BiorhythmCard';
+import { useStoredState } from './lib/hook';
 
 function getToday() {
   return new Date().toString().slice(0, 'yyyy-mm-dd'.length);
@@ -8,7 +9,7 @@ function getToday() {
 
 function App() {
   
-  const [birthDate, setBirthDate] = useState('');
+  const [birthDate, setBirthDate] = useStoredState('birthDate', '');
   const [targetDate, setTargetDate] = useState(getToday);
 
 
