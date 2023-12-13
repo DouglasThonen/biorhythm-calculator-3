@@ -8,16 +8,20 @@ function getToday() {
 }
 
 function App() {
+
+ 
   
   const [birthDate, setBirthDate] = useStoredState('birthDate', '');
   const [targetDate, setTargetDate] = useState(getToday);
+
+  
 
 
 
   return (
     <IonApp>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="primary">
           <IonTitle>Biorhythms</IonTitle>
         </IonToolbar>
       </IonHeader>
